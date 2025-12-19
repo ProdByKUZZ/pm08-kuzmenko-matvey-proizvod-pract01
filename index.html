@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Климат Профи | Установка и продажа кондиционеров в Новосибирске и области</title>
+    <meta name="description" content="Профессиональная установка и продажа кондиционеров в Новосибирске. Гарантия 3 года, бесплатный замер, скидки до 30%">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="promo-notification" id="promoNotification">
+        <div class="promo-header">
+            <div class="promo-title"><i class="fas fa-gift"></i> Специальное предложение!</div>
+            <button class="promo-close" onclick="closePromo()"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="promo-content">
+            <p>Скидка 15% на установку при заказе до конца месяца!</p>
+            <div class="promo-code">КЛИМАТ2024</div>
+        </div>
+        <div class="promo-footer">Назовите промокод менеджеру при оформлении</div>
+    </div>
+
+
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <div class="logo-icon"><i class="fas fa-snowflake"></i></div>
+                <div class="logo-text">
+                    <div class="logo-main">Климат<span>Профи</span></div>
+                    <div class="logo-sub">НОВОСИБИРСК</div>
+                </div>
+            </a>
+            
+            <div class="nav-container">
+                <ul class="nav-menu">
+                    <li><a href="#services" class="active"><i class="fas fa-cog"></i> Услуги</a></li>
+                    <li><a href="#selection"><i class="fas fa-search"></i> Подбор</a></li>
+                    <li><a href="#catalog"><i class="fas fa-box"></i> Каталог</a></li>
+                    <li><a href="#tips"><i class="fas fa-lightbulb"></i> Советы</a></li>
+                    <li><a href="#appointment"><i class="fas fa-calendar-check"></i> Запись</a></li>
+                </ul>
+            </div>
+            
+            <div class="header-cta">
+                <a href="tel:+73831234567" class="header-phone">
+                    <i class="fas fa-phone"></i> +7 (983) 137-98-98
+                </a>
+            </div>
+            
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Мобильное меню -->
+    <div class="mobile-menu-overlay" id="mobileOverlay" onclick="toggleMobileMenu()"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="logo-main">Климат<span>Профи</span></div>
+            <button class="mobile-menu-close" onclick="toggleMobileMenu()"><i class="fas fa-times"></i></button>
+        </div>
+        <ul class="mobile-nav">
+            <li><a href="#services" onclick="toggleMobileMenu()"><i class="fas fa-cog"></i> Услуги</a></li>
+            <li><a href="#selection" onclick="toggleMobileMenu()"><i class="fas fa-search"></i> Подбор</a></li>
+            <li><a href="#catalog" onclick="toggleMobileMenu()"><i class="fas fa-box"></i> Каталог</a></li>
+            <li><a href="#tips" onclick="toggleMobileMenu()"><i class="fas fa-lightbulb"></i> Советы</a></li>
+            <li><a href="#appointment" onclick="toggleMobileMenu()"><i class="fas fa-calendar-check"></i> Запись</a></li>
+        </ul>
+        <a href="tel:+73831234567" class="mobile-phone"><i class="fas fa-phone"></i> +7 (383) 123-45-67</a>
+        <div class="mobile-hours"><i class="fas fa-clock"></i> Пн-Сб: 9:00 - 20:00</div>
+    </div>
+
+    <!-- Герой секция -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Кондиционеры в Новосибирске с установкой под ключ</h1>
+                <p class="hero-subtitle">Профессиональный монтаж за 1 день. Гарантия 3 года. Бесплатный выезд замерщика!</p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">12+</div>
+                        <div class="stat-label">лет опыта</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">5000+</div>
+                        <div class="stat-label">установок</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">года гарантии</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">-30%</div>
+                        <div class="stat-label">скидка сезона</div>
+                    </div>
+                </div>
+                
+                <div class="hero-buttons">
+                    <a href="https://t.me/nottooholy" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-telegram"></i> ЗАПИСАТЬСЯ
+                    </a>
+                    <a href="#selection" class="btn btn-secondary">
+                        <i class="fas fa-calculator"></i> Подобрать кондиционер
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="fade-in">Наши услуги</h2>
+                <p class="section-subtitle fade-in">Полный спектр услуг по установке, обслуживанию и ремонту климатического оборудования</p>
+            </div>
+            
+            <div class="services-grid fade-in">
+                <div class="service-card">
+                    <span class="service-badge">Популярно</span>
+                    <div class="service-image">
+                        <img src="https://elsvent.ru/images/kondicionery-electrostal.jpg" alt="Установка кондиционера">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon"><i class="fas fa-tools"></i></div>
+                        <h3 class="service-title">Установка сплит-систем</h3>
+                        <p class="service-description">Профессиональный монтаж кондиционеров любой сложности с гарантией качества</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Монтаж за 1 день</li>
+                            <li><i class="fas fa-check"></i> Все расходники включены</li>
+                            <li><i class="fas fa-check"></i> Гарантия 3 года</li>
+                        </ul>
+                        <div class="service-pricing">
+                            <div class="price-container">
+                                <div class="price-with-install">от 5 000 ₽</div>
+                            </div>
+                            <a href="https://t.me/nottooholy" target="_blank" class="btn btn-primary">ЗАПИСАТЬСЯ</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://topclim.ru/upload/resize_cache/webp/iblock/0a2/0a2f27b335ef720441b52b24eab08b62.webp" alt="Обслуживание кондиционера">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3 class="service-title">Техническое обслуживание</h3>
+                        <p class="service-description">Чистка, заправка и диагностика кондиционеров для безупречной работы</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Чистка внутреннего блока</li>
+                            <li><i class="fas fa-check"></i> Проверка фреона</li>
+                            <li><i class="fas fa-check"></i> Диагностика системы</li>
+                        </ul>
+                        <div class="service-pricing">
+                            <div class="price-container">
+                                <div class="price-with-install">от 2 500 ₽</div>
+                            </div>
+                            <a href="https://t.me/nottooholy" target="_blank" class="btn btn-primary">ЗАПИСАТЬСЯ</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnJ_eUSMfsUm343QbSrTTpJR1lyk9ZuBs76g&s" alt="Ремонт кондиционера">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon"><i class="fas fa-wrench"></i></div>
+                        <h3 class="service-title">Ремонт кондиционеров</h3>
+                        <p class="service-description">Быстрый и качественный ремонт любых неисправностей</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Выезд в день обращения</li>
+                            <li><i class="fas fa-check"></i> Оригинальные запчасти</li>
+                            <li><i class="fas fa-check"></i> Гарантия на работы</li>
+                        </ul>
+                        <div class="service-pricing">
+                            <div class="price-container">
+                                <div class="price-with-install">от 1 500 ₽</div>
+                            </div>
+                            <a href="https://t.me/nottooholy" target="_blank" class="btn btn-primary">ЗАПИСАТЬСЯ</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <span class="service-badge">Выгодно</span>
+                    <div class="service-image">
+                        <img src="https://xn----8sbccorcrd2ampidekz9n.xn--p1ai/storage/app/media/uploaded-files/14.jpg" alt="Демонтаж кондиционера">
+                    </div>
+                    <div class="service-content">
+                        <div class="service-icon"><i class="fas fa-truck-loading"></i></div>
+                        <h3 class="service-title">Демонтаж и перенос</h3>
+                        <p class="service-description">Аккуратный демонтаж и перенос кондиционера на новое место</p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Сохранение фреона</li>
+                            <li><i class="fas fa-check"></i> Упаковка и транспортировка</li>
+                            <li><i class="fas fa-check"></i> Монтаж на новом месте</li>
+                        </ul>
+                        <div class="service-pricing">
+                            <div class="price-container">
+                                <div class="price-with-install">от 3 500 ₽</div>
+                            </div>
+                            <a href="https://t.me/nottooholy" target="_blank" class="btn btn-primary">ЗАПИСАТЬСЯ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Умный подбор кондиционера -->
+    <section class="selection" id="selection">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="fade-in">Умный подбор кондиционера</h2>
+                <p class="section-subtitle fade-in">Ответьте на 4 вопроса, и мы подберем идеальные модели под ваши параметры</p>
+            </div>
+            
+            <div class="smart-selector fade-in">
+                <div class="selector-progress">
+                    <div class="progress-step active" data-step="1">
+                        <div class="step-number">1</div>
+                        <div class="step-label">Площадь</div>
+                    </div>
+                    <div class="progress-step" data-step="2">
+                        <div class="step-number">2</div>
+                        <div class="step-label">Помещение</div>
+                    </div>
+                    <div class="progress-step" data-step="3">
+                        <div class="step-number">3</div>
+                        <div class="step-label">Особенности</div>
+                    </div>
+                    <div class="progress-step" data-step="4">
+                        <div class="step-number">4</div>
+                        <div class="step-label">Бюджет</div>
+                    </div>
+                </div>
+                
+                <div class="selector-content">
+                    <!-- Шаг 1: Площадь -->
+                    <div class="selector-step active" id="step1">
+                        <h3 class="step-title">Какая площадь вашего помещения?</h3>
+                        <div class="slider-container">
+                            <div class="slider-header">
+                                <span class="slider-label">Площадь:</span>
+                                <span class="slider-value" id="areaValue">25 м²</span>
+                            </div>
+                            <input type="range" min="10" max="100" value="25" class="slider" id="areaSlider">
+                            <div class="slider-footer">
+                                <span>10 м²</span>
+                                <span>100 м²</span>
+                            </div>
+                        </div>
+                        <div class="selector-navigation">
+                            <div></div>
+                            <button class="btn btn-primary next-step" data-next="2">Далее <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Шаг 2: Тип помещения -->
+                    <div class="selector-step" id="step2">
+                        <h3 class="step-title">Какой тип помещения?</h3>
+                        <div class="options-grid">
+                            <div class="option-card" data-type="apartment">
+                                <div class="option-icon"><i class="fas fa-home"></i></div>
+                                <h4>Квартира</h4>
+                                <p>Стандартные жилые помещения</p>
+                            </div>
+                            <div class="option-card" data-type="office">
+                                <div class="option-icon"><i class="fas fa-building"></i></div>
+                                <h4>Офис</h4>
+                                <p>Рабочие помещения</p>
+                            </div>
+                            <div class="option-card" data-type="cottage">
+                                <div class="option-icon"><i class="fas fa-warehouse"></i></div>
+                                <h4>Коттедж</h4>
+                                <p>Частный дом</p>
+                            </div>
+                            <div class="option-card" data-type="shop">
+                                <div class="option-icon"><i class="fas fa-store"></i></div>
+                                <h4>Магазин</h4>
+                                <p>Торговые площади</p>
+                            </div>
+                        </div>
+                        <div class="selector-navigation">
+                            <button class="btn btn-outline prev-step" data-prev="1"><i class="fas fa-arrow-left"></i> Назад</button>
+                            <button class="btn btn-primary next-step" data-next="3">Далее <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Шаг 3: Особенности -->
+                    <div class="selector-step" id="step3">
+                        <h3 class="step-title">Важные особенности (можно несколько)</h3>
+                        <div class="options-grid">
+                            <div class="option-card" data-feature="sunny">
+                                <div class="option-icon"><i class="fas fa-sun"></i></div>
+                                <h4>Солнечная сторона</h4>
+                                <p>Много солнечного света</p>
+                            </div>
+                            <div class="option-card" data-feature="quiet">
+                                <div class="option-icon"><i class="fas fa-volume-mute"></i></div>
+                                <h4>Тихая работа</h4>
+                                <p>Минимальный шум</p>
+                            </div>
+                            <div class="option-card" data-feature="heating">
+                                <div class="option-icon"><i class="fas fa-temperature-high"></i></div>
+                                <h4>Обогрев зимой</h4>
+                                <p>Использование зимой</p>
+                            </div>
+                            <div class="option-card" data-feature="wifi">
+                                <div class="option-icon"><i class="fas fa-wifi"></i></div>
+                                <h4>Wi-Fi управление</h4>
+                                <p>Управление со смартфона</p>
+                            </div>
+                        </div>
+                        <div class="selector-navigation">
+                            <button class="btn btn-outline prev-step" data-prev="2"><i class="fas fa-arrow-left"></i> Назад</button>
+                            <button class="btn btn-primary next-step" data-next="4">Далее <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                    
+                    <!-- Шаг 4: Бюджет -->
+                    <div class="selector-step" id="step4">
+                        <h3 class="step-title">Ваш бюджет (кондиционер + установка)</h3>
+                        <div class="slider-container">
+                            <div class="slider-header">
+                                <span class="slider-label">Бюджет:</span>
+                                <span class="slider-value" id="budgetValue">45 000 ₽</span>
+                            </div>
+                            <input type="range" min="25000" max="150000" value="45000" step="5000" class="slider" id="budgetSlider">
+                            <div class="slider-footer">
+                                <span>25 000 ₽</span>
+                                <span>150 000 ₽</span>
+                            </div>
+                        </div>
+                        <div class="selector-navigation">
+                            <button class="btn btn-outline prev-step" data-prev="3"><i class="fas fa-arrow-left"></i> Назад</button>
+                            <button class="btn btn-primary" id="calculateResults"><i class="fas fa-search"></i> Подобрать варианты</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Результаты -->
+                    <div class="selector-results" id="resultsContainer">
+                        <div class="results-header">
+                            <h3>Рекомендуемые модели для вас</h3>
+                            <p id="resultsSummary"></p>
+                        </div>
+                        <div class="results-grid" id="resultsGrid"></div>
+                        <div class="selector-navigation">
+                            <button class="btn btn-outline" id="restartSelection"><i class="fas fa-redo"></i> Начать заново</button>
+                            <a href="https://t.me/nottooholy" target="_blank" class="btn btn-green"><i class="fab fa-telegram"></i> ЗАПИСАТЬСЯ</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Каталог -->
+    <section class="catalog" id="catalog">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="fade-in">Каталог кондиционеров</h2>
+                <p class="section-subtitle fade-in">Широкий выбор сплит-систем от ведущих производителей</p>
+            </div>
+            
+            <div class="catalog-filter fade-in">
+                <button class="filter-btn active" data-filter="all"><i class="fas fa-layer-group"></i> Все</button>
+                <button class="filter-btn" data-filter="budget"><i class="fas fa-wallet"></i> Бюджетные</button>
+                <button class="filter-btn" data-filter="mid"><i class="fas fa-star"></i> Средний класс</button>
+                <button class="filter-btn" data-filter="premium"><i class="fas fa-crown"></i> Премиум</button>
+            </div>
+            
+            <div class="catalog-grid fade-in" id="catalogGrid"></div>
+            
+            <div class="text-center fade-in">
+                <a href="https://t.me/nottooholy" target="_blank" class="btn btn-primary">
+                    <i class="fab fa-telegram"></i> Заказать консультацию
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Советы -->
+    <section class="tips" id="tips">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="fade-in">Советы по выбору и установке</h2>
+                <p class="section-subtitle fade-in">Полезная информация от наших экспертов</p>
+            </div>
+            
+            <div class="tips-tabs fade-in">
+                <button class="tip-tab active" data-tab="choice"><i class="fas fa-search"></i> Выбор кондиционера</button>
+                <button class="tip-tab" data-tab="installation"><i class="fas fa-tools"></i> Установка</button>
+                <button class="tip-tab" data-tab="maintenance"><i class="fas fa-shield-alt"></i> Обслуживание</button>
+                <button class="tip-tab" data-tab="faq"><i class="fas fa-question-circle"></i> Частые вопросы</button>
+            </div>
+            
+            <div class="tips-content fade-in">
+                <!-- Вкладка выбора -->
+                <div class="tip-panel active" id="panel-choice">
+                    <h3><i class="fas fa-lightbulb"></i> Как правильно выбрать кондиционер</h3>
+                    <div class="tips-grid">
+                        <div class="tip-card">
+                            <div class="tip-number">1</div>
+                            <h4>Расчёт мощности</h4>
+                            <p>На каждые 10 м² площади нужен 1 кВт мощности охлаждения. Для южной стороны и верхних этажей добавьте 20-30%.</p>
+                        </div>
+                        <div class="tip-card">
+                            <div class="tip-number">2</div>
+                            <h4>Инвертор или обычный?</h4>
+                            <p>Инверторные модели экономят до 40% электроэнергии, работают тише и точнее поддерживают температуру.</p>
+                        </div>
+                        <div class="tip-card">
+                            <div class="tip-number">3</div>
+                            <h4>Уровень шума</h4>
+                            <p>Для спальни выбирайте модели с уровнем шума до 22 дБ. Для гостиной допустимо до 28 дБ.</p>
+                        </div>
+                        <div class="tip-card">
+                            <div class="tip-number">4</div>
+                            <h4>Дополнительные функции</h4>
+                            <p>Wi-Fi управление, ионизация, самоочистка, режим обогрева — выбирайте то, что действительно нужно.</p>
+                        </div>
+                        <div class="tip-card">
+                            <div class="tip-number">5</div>
+                            <h4>Класс энергоэффективности</h4>
+                            <p>Класс A+++ экономит до 50% электроэнергии по сравнению с классом A. Окупается за 2-3 года.</p>
+                        </div>
+                        <div class="tip-card">
+                            <div class="tip-number">6</div>
+                            <h4>Бренд и гарантия</h4>
+                            <p>Выбирайте проверенные бренды с официальной гарантией. Мы работаем только с надёжными производителями.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Вкладка установки -->
+                <div class="tip-panel" id="panel-installation">
+                    <h3><i class="fas fa-tools"></i> Важно знать об установке</h3>
+                    <div class="tips-grid">
+                        <div class="tip-card">
+                            <div class="tip-number">1</div>
+                            <h4>Где разместить внутренний блок</h4>
+                            <p>Не напротив рабочего места или кровати. Расстояние от потолка минимум 10-15 см. Не над батареей отопления.</p>
+                        </div>
+                        <div class="tip-card">
+                            <div class="tip-number">2</div>
+                            <h4>Внешний блок</h4>
+                            <p>Устанавливается в защищённом от прямых солнечных лучей месте. Должен быть доступ для обслуживания.</p>
+                        </div>
+                        <div class="tip-card">
+                            <div class="tip-number">3</div>
+                            <h4>Длина трассы</h4>
+                            <p>Оптимальная длина медной трассы 3-5 метров. При большей длине эффективность снижается.</p>
+                        </div>
+                        <div class="tip-card">
+                            <div class="tip-number">4</div>
+                            <h4>Дренаж</h4>
+                            <p>Конденсат должен отводиться в канализацию или на улицу. Не допускайте перегибов дренажной трубки.</p>
+                        </div>
+                        <div class="tip-card">
+                            <div class="tip-number">5</div>
+                            <h4>Электропитание</h4>
+                            <p>Кондиционер требует отдельной линии с автоматом. Мощные модели подключаются к трёхфазной сети.</p>
+                        </div>
+                        <div class="tip-card">
+                            <div class="tip-number">6</div>
+                            <h4>Когда устанавливать</h4>
+                            <p>Лучшее время — весна или осень. Летом очереди, зимой — ограничения по температуре для пуска.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Вкладка обслуживания -->
+                <div class="tip-panel" id="panel-maintenance">
+                    <h3><i class="fas fa-shield-alt"></i> Правила обслуживания</h3>
+                    <div class="tips-grid">
+                        <div class="tip-card">
+                            <div class="tip-number">1</div>
+                            <h4>Чистка фильтров</h4>
+                            <p>Промывайте фильтры внутреннего блока каждые 2-4 недели. Это улучшает качество воздуха и экономит энергию.</p>
+                        </div>
+                        <div class="tip-card">
+                            <div class="tip-number">2</div>
+                            <h4>Профессиональное ТО</h4>
+                            <p>Раз в год вызывайте специалиста для глубокой чистки теплообменника и проверки фреона.</p>
+                        </div>
+                        <div class="tip-card">
+                            <div class="tip-number">3</div>
+                            <h4>Чистка внешнего блока</h4>
+                            <p>Перед сезоном очищайте решётку внешнего блока от пуха, листьев и грязи.</p>
+                        </div>
+                        <div class="tip-card">
+                            <div class="tip-number">4</div>
+                            <h4>Контроль дренажа</h4>
+                            <p>Проверяйте, чтобы конденсат свободно стекал. Засор дренажа приводит к протечкам.</p>
+                        </div>
+                        <div class="tip-card">
+                            <div class="tip-number">5</div>
+                            <h4>Признаки проблем</h4>
+                            <p>Слабое охлаждение, посторонние запахи, повышенный шум — сигналы для обращения к мастеру.</p>
+                        </div>
+                        <div class="tip-card">
+                            <div class="tip-number">6</div>
+                            <h4>Зимняя консервация</h4>
+                            <p>Если не используете кондиционер зимой, накройте внешний блок и отключите от сети.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ -->
+                <div class="tip-panel" id="panel-faq">
+                    <h3><i class="fas fa-question-circle"></i> Частые вопросы</h3>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <span>Сколько времени занимает установка?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Стандартная установка занимает 2-4 часа. При сложных условиях (высокий этаж, длинная трасса) — до 6 часов.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <span>Можно ли установить кондиционер зимой?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Да, можно. Монтаж выполняется при температуре до -15°C. Пусконаладка откладывается до потепления до +5°C.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <span>Что входит в стоимость установки?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Стандартный монтаж включает: бурение отверстия, прокладку трассы до 3м, установку блоков, вакуумирование, пуск, инструктаж.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <span>Как часто нужно заправлять фреон?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>При правильной установке дозаправка не нужна годами. Если кондиционер слабо холодит — возможна утечка, нужна диагностика.</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <span>Какая гарантия на работы?</span>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Гарантия на монтажные работы — 3 года. На оборудование действует гарантия производителя (обычно 3-5 лет).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tips-cta fade-in">
+                <div class="tips-cta-content">
+                    <h4>Остались вопросы?</h4>
+                    <p>Наши специалисты бесплатно проконсультируют вас по любым вопросам</p>
+                </div>
+                <a href="https://t.me/nottooholy" target="_blank" class="btn btn-primary"><i class="fab fa-telegram"></i> ЗАПИСАТЬСЯ</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Запись -->
+    <section class="appointment" id="appointment">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="fade-in">Запись на консультацию</h2>
+                <p class="section-subtitle fade-in">Оставьте заявку, и мы свяжемся с вами в течение 15 минут</p>
+            </div>
+            
+            <div class="appointment-container fade-in">
+                <div class="appointment-info">
+                    <h3>Почему выбирают нас</h3>
+                    <ul class="info-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>12+ лет опыта</strong>
+                                <span>Профессиональная команда с многолетним опытом</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Гарантия 3 года</strong>
+                                <span>Полная гарантия на все виды работ</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Бесплатный выезд</strong>
+                                <span>Замер и консультация без оплаты</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <strong>Честные цены</strong>
+                                <span>Никаких скрытых платежей</span>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <div class="contact-card">
+                        <h4>Контакты</h4>
+                        <p><i class="fas fa-phone"></i> +7 (983) 137-98-98</p>
+                        <p><i class="fas fa-clock"></i> Пн-Сб: 9:00 - 20:00</p>
+                        <p><i class="fas fa-map-marker-alt"></i> г. Новосибирск</p>
+                    </div>
+                </div>
+                
+                <div class="appointment-form-container">
+                    <h3>Быстрая связь</h3>
+                    <p>Напишите нам в Telegram — ответим за 5 минут!</p>
+                    <a href="https://t.me/nottooholy" target="_blank" class="telegram-btn">
+                        <i class="fab fa-telegram"></i>
+                        НАПИСАТЬ В TELEGRAM
+                    </a>
+                    <div class="divider">или позвоните</div>
+                    <a href="tel:+73831234567" class="phone-btn">
+                        <i class="fas fa-phone"></i>
+                        +7 (383) 123-45-67
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">Климат<span>Профи</span></div>
+                    <p>Профессиональная установка и обслуживание климатического оборудования в Новосибирске и области с 2012 года.</p>
+                    <div class="social-links">
+                        <a href="https://t.me/nottooholy" target="_blank" class="social-link"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-vk"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Услуги</h4>
+                    <ul>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Установка кондиционеров</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Обслуживание</a></li>
+                        <li><a href="#services"><i class="fas fa-chevron-right"></i> Ремонт</a></li>
+                        <li><a href="#catalog"><i class="fas fa-chevron-right"></i> Каталог</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Контакты</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> г. Новосибирск</p>
+                    <p><i class="fas fa-phone"></i> +7 (983) 137-98-98</p>
+                    <p><i class="fas fa-clock"></i> Пн-Сб: 9:00 - 20:00</p>
+                    <p><i class="fas fa-envelope"></i> info@klimatprofi.ru</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>© 2024 КлиматПрофи. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Кнопка наверх -->
+    <button class="scroll-top" id="scrollTop" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Плавающая кнопка Telegram -->
+    <a href="https://t.me/nottooholy" target="_blank" class="floating-telegram">
+        <i class="fab fa-telegram"></i>
+        <span>Написать</span>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
